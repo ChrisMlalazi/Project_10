@@ -12,8 +12,8 @@ $(document).ready(function () {
        type: 'GET',
        url: 'http://pokeapi.co/api/v2/',
        success: function(data) {
-       	console.log('success', picture)
-       	$.each(picture, function(i, picture){
+       	console.log('success', data)
+       	$.each(data, function(i, data){
           $photos.append('<li>Pictures</li>');
        	});
        }
