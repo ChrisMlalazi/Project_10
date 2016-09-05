@@ -12,7 +12,7 @@ $(document).ready(function () {
        type: 'GET',
        url: 'http://pokeapi.co/api/v2/',
        success: function(data) {
-       	console.log('success', data)
+       	console.log('success', picture)
        	$.each(picture, function(i, picture){
           $photos.append('<li>Pictures</li>');
        	});
