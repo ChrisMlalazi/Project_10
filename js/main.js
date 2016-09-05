@@ -14,7 +14,7 @@ $(document).ready(function () {
        success: function(data) {
        	console.log('success', data)
        	$.each(data, function(i, data){
-          $photos.append('<li>'+ $photos + '</li>');
+          $photos = ('<li>'+ data + '</li>');
        	});
        }
 
