@@ -7,31 +7,19 @@ $('.hamburger').on('click', function(e) {
 
 
 $(document).ready(function () {
-  $('button').click(function () {
+  var $photos = $('#photos');
+  $.ajax({
+       type: 'GET',
+       url: 'http://pokeapi.co/api/v2/',
+       success: function(data) {
+       	console.log('success', data)
+       	$.each(picture, function(i, picture){
+          $photos.append('<li>Pictures</li>');
+       	});
+       }
+
+  });      
  
-    $("button").removeClass("selected");
-       $(this).addClass("selected");
-		 var flickerAPI = "https://swapi.co/api/planets/1/?format=wookiee";
-		var animal = $(this).text();
-		var flickrOptions = {
-		tags: animal,
-			format: "json"
-		};
-		function displayPhotos(data){
-			var photoHTML = '<ul>';
-			$.each(data.items, function(i, photo){
-				photoHTML += '<li class="grid-25 table-grid-50">';
-				photoHTML += '<a href="' + photo.link + '" class="image">';
-				photoHTML += '<img src="' + photo.media.m + '"></a></li>';
-				photoHTML += '</ul>';
-				$('#photos').html(photoHTML);
-			});
-			
-		}
-		$.getJSON(flickerAPI, flickrOptions, displayPhotos);
-		
-       
-  });
 }); // end ready
 
 
