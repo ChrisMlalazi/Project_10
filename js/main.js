@@ -10,7 +10,7 @@ $(document).ready(function () {
   var $photos = $('#photos');
   $.ajax({
        type: 'GET',
-       url: 'http://pokeapi.co/api/v2/',
+       url: 'https://pokeapi.co/api/v2/',
        success: function(data) {
        	console.log('success', data)
        	$.each(data, function(i, data){
