@@ -8,17 +8,19 @@ $('.hamburger').on('click', function(e) {
 
 $(document).ready(function () {
   var $photos = $('#photos');
+  $("button").click(function(){
   $.ajax({
        type: 'GET',
        url: 'https://pokeapi.co/api/v2/',
        success: function(data) {
        	console.log('success', data)
        	$.each(data, function(i, data){
-          $photos = ('<li>'+ data + '</li>');
+          $photos.html(data);
        	});
        }
 
-  });      
+  }); 
+  });     
  
 }); // end ready
 
