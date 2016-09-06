@@ -3,9 +3,9 @@ $(document).ready(function () {
     $("button").removeClass("selected");
      $(this).addClass("selected");
      var flickerAPI = "https://pokeapi.co/api/v2/ability/4/";
-    var animal = $(this).text();
+    var image = $(this).text();
     var flickrOptions = {
-    tags: animal,
+    tags: image,
       format: "json"
     };
     function displayPhotos(data){
