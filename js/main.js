@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('button').click(function () {
     $("button").removeClass("selected");
      $(this).addClass("selected");
-     var flickerAPI = "http://pokeapi.co/api/v2/ability/4/";
+     var flickerAPI = "https://pokeapi.co/api/v2/ability/4/";
     var animal = $(this).text();
     var flickrOptions = {
     tags: animal,
