@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Flickr gallery by Aurelio De Rosa</title>
-
-      <link rel="stylesheet" href="css/normalize.css" />
-      <link rel="stylesheet" href="css/helpers.css" />
-      <link rel="stylesheet" href="css/layout.css" />
-      <link rel="stylesheet" href="css/gallery.css" />
-      <link rel="stylesheet" href="css/thumbnails.css" />
-      <link rel="stylesheet" href="css/homepage.css" />
-   </head>
-   <body>
-      <header class="island">
-         <h1>Flickr gallery</h1>
-         <form class="js-form-search form-search" action="/search" method="get" role="search">
-            <label for="query">Search:</label>
-            <input type="search" name="query" id="query" placeholder="Search" required />
-            <input type="submit" value="Search" />
-         </form>
-      </header>
-
-      <div class="island">
-         <div class="js-gallery gallery">
-            <img src="" class="js-gallery__image" />
-            <button class="js-gallery__arrow--left gallery__arrow gallery__arrow--left">
-               <span class="visually-hidden">Previous photo</span>
-            </button>
-            <button class="js-gallery__arrow--right gallery__arrow gallery__arrow--right">
-               <span class="visually-hidden">Next photo</span>
-            </button>
-         </div>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Flickr Photo Feeder</title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <div class="container">
+  <div class="wrapper">
+  <h1>Pokemon Search</h1>
+  <h4>Enter a name or any number</h4>
+  <form>
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="form-group">
+          <input type="text" class="form-control" id="name" placeholder="pikachu">
+        </div>
       </div>
-
-      <div class="island thumbnails">
-         <ul class="js-thumbnails__list thumbnails__list"></ul>
-         <ol class="js-thumbnails__pager thumbnails__pager"></ol>
+      <div class="col-md-6 col-sm-6">
+        <div class="form-group">
+          <input type="number" class="form-control" id="number" placeholder="1 to 721">
+        </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <button id="sender" type="submit" class="btn btn-default btn-block">Submit</button>
+      </div>
+    </div> 
 
-      <small class="island copyright">
-         Created by  <a href="http://www.audero.it">Aurelio De Rosa</a>
-         (<a href="https://twitter.com/AurelioDeRosa">@AurelioDeRosa</a>)
-      </small>
+   
+    <div class="column">
+      <div class="chris">
 
-      <script src="js/utility.js"></script>
-      <script src="js/gallery.js"></script>
-      <script src="js/flickr.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+       <h4 class="gallery">Gallery of magic!</h4>
+        <div class="pokemon">
+         
+
+        </div>
+        </div>
+        </div> <!-- wrapper -->
+
+      </div>
+      <div class="chris2">
+        <span class="pokemonName"></span>
+        </div>
+
+    </div>
+  </form>
+</div>
+</body>
 </html>
