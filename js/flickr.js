@@ -9,9 +9,9 @@ $(document).ready(function() {
 
     // the AJAX part
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-    var animal = $(this).text();
+    var cities = $(this).text();
     var flickrOptions = {
-      tags: animal,
+      tags: cities,
       format: "json"
     };
     function displayPhotos(data) {
