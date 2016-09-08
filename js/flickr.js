@@ -17,7 +17,7 @@ $(document).ready(function() {
     function displayPhotos(data) {
       var photoHTML = '<ul>';
       $.each(data.items,function(i,photo) {
-        photoHTML += '<li class="grid-6 tablet-grid-6">';
+        photoHTML += '<li class="grid-06 tablet-grid-06">';
         photoHTML += '<a href="' + photo.link + '" class="image">';
         photoHTML += '<img src="' + photo.media.m + '"></a></li>';
       }); // end each
