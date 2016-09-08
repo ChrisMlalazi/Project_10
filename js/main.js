@@ -1,39 +1,31 @@
-$(document).on('ready', function() {
-  console.log('test');
 
-  $('form').submit(function(event) {
-    event.preventDefault();
 
-    var number = $('#number').val();
-    var name = $('#name').val();
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=30e8eb2ba310942be0b2aa8601726c2a&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1",
+  "method": "GET",
+  "headers": {}
+}
 
-    var id = $('#name').val() || $('#number').val();
+$.ajax(settings).done(function (data) {
+  console.log(data);
 
-    if (id === '') {
-      $("input").val('');
-      alert('enter a pokemon name or number');
-    } else {
-      $('.pokemon').append('<img class="load" src="http://66.media.tumblr.com/4e5ea9cd6a7f7c24be02d97f5a50f7ab/tumblr_mn1617ipjN1soo2hgo1_250.gif">')
 
-      $.ajax({
-        method: 'GET',
-        url: 'http://pokeapi.co/api/v2/pokemon/' + id,
-        success: function(pokemon) {
 
-          console.log(pokemon);
+$("#galleryTitle").append(data.photos.photo[0].title + " Gallery");
+      $.each( data.photos.photo, function( i, gp ) {
 
-          $('.pokemon').append('<img src="http://pokeapi.co/media/sprites/pokemon/shiny/' + pokemon.id + '.png">');
-          $('.pokemonName').append('<p>' + pokemon.forms[0].name + '</p>');
-          $("input").val('');
-          $('.load').remove();
+var farmId = gp.farm;
+var serverId = gp.server;
+var id = gp.id;
+var secret = gp.secret;
 
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-          $("input").val('');
-          alert('not a pokemon');
-          $('.load').remove();
-        }
-      });
-    }
-  });
+console.log(farmId + ", " + serverId + ", " + id + ", " + secret);
+
+//  https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+
+$("#flickr").append('<img src="https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg"/>');
+
+});
 });
