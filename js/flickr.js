@@ -14,21 +14,21 @@ $(document).ready(function() {
       tags: cities,
       format: "json"
     };
-    function displayPhotos(data) {
-      var photoHTML = '<ul class="flick">';
+   function displayPhotos(data) {
+      var photoHTML = '<ul>';
       $.each(data.items,function(i,photo) {
-        photoHTML += '<li class="grid-25>';
+        photoHTML += '<li>';
         photoHTML += '<a href="' + photo.link + '" class="image">';
         photoHTML += '<img src="' + photo.media.m + '"></a></li>';
       }); // end each
       photoHTML += '</ul>';
       $('#photos').html(photoHTML);
-       
-    };
-      
-
-
+      $('li').on('click', '.image', function(e) {
+          e.preventDefault();
+        });
+    }
     $.getJSON(flickerAPI, choice, displayPhotos);
 
   }); // end click
+
 }); // end ready

@@ -18,9 +18,6 @@ body {
 .heading {
   background: linear-gradient(#808080, transparent 10%),               
   height: 200px;
-
- 
-
 }
 
 .heading img {
@@ -28,6 +25,7 @@ body {
   height: 200px;
   background-size: cover;
   border-bottom: 2px solid white;
+  margin-top: 0;
 }
 
 .innovation {
@@ -55,14 +53,22 @@ body {
   display: inline-block; 
 }
 
+a {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
 
 .types {
-  margin-top: -100px;
+  margin-top: -110px;
 }
 
 button {
- height: 50px;
- width: 150px;
+ height: 40px;
+ width: 120px;
  font-size: 1em;
  margin-right: 10px;
  border-radius: 20px;
@@ -75,6 +81,7 @@ button {
 
 button:hover {
   background-color: #add8e6;
+  border: 1px solid yellow;
 }
 
 .flick{
@@ -108,6 +115,9 @@ button:hover {
 
 
 
+
+
+
 /************
 MEDIA QUERIES
 *************/
@@ -116,7 +126,6 @@ MEDIA QUERIES
 @media screen and (min-width: 600px) { 
 
   #photos {
-  background-color: green;
   width: 100%;
 
 }
@@ -144,6 +153,26 @@ MEDIA QUERIES
   list-style: none;
    margin-top: 40px;
    display: inline-block;
+}
+
+.innovation{
+  position: relative;
+  bottom: 150px;
+  color: white;
+  font-size: 2.5em;
+}
+
+.innovation2 {
+   position: relative;
+  bottom: 170px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+.types {
+  margin-top: -140px;
 }
 
 }
