@@ -15,10 +15,6 @@ body {
   text-align: center;
 }
 
-.heading {
-  background: linear-gradient(#808080, transparent 10%),               
-  height: 200px;
-}
 
 .heading img {
   width: 100%;
@@ -32,12 +28,12 @@ body {
   position: relative;
   bottom: 150px;
   color: white;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .innovation2 {
    position: relative;
-  bottom: 170px;
+  bottom: 150px;
   color: yellow;
   font-weight: bold;
 
@@ -63,7 +59,7 @@ li {
 
 
 .types {
-  margin-top: -110px;
+  margin-top: -90px;
 }
 
 button {
@@ -112,6 +108,8 @@ button:hover {
   transform: scale(1.04, 1.04);
 
 }
+
+
 
 
 
