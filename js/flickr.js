@@ -32,6 +32,9 @@ $(document).ready(function() {
     }); //
   photoHTML += '</ul>';
       $('#photos').html(photoHTML);
+      //add event listener to start the lightbox
+                            img.addEventListener("click",  function(e){startLightbox(items)}, false);
+                            document.getElementById("photos").appendChild(img); 
       
     }
     $.getJSON(flickerAPI, flickrOptions, displayPhotos);
