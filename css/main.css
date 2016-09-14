@@ -108,12 +108,24 @@ button:hover {
 }
 
 
+.lb-image{
+    width:280px !important;
+    height:280px !important;
+  }
+
+
 /************
 MEDIA QUERIES
 *************/
 
 
 @media screen and (min-width: 600px) { 
+
+
+.lb-image{
+    width:300px !important;
+    height:300px !important;
+  }
 
   #photos {
   width: 100%;
@@ -136,6 +148,10 @@ MEDIA QUERIES
 
 @media screen and (min-width: 737px) { 
 
+  .lb-image{
+    width:500px !important;
+    height:500px !important;
+}
 #photos img {
  width: 200px;
   height: 200px;
