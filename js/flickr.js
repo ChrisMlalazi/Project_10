@@ -1,23 +1,18 @@
  
 $(document).ready(function() {
-
+  //Add click to buttons
  $('button').click(function (event) {
       event.preventDefault();
-    // highlight the button
-    // not AJAX, just cool looking
+  
     $("button").removeClass("selected");
     $(this).addClass("selected");
-      // var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
       var animal = $(this).text();
       var flickrOptions = {
-        tags: "nature",
+        tags: "machines",
         format: "json"
       };
 
-
-// $('#photos').ready(function() {
-
-    // the AJAX part
+    // Add AJAX
     var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
     var flickrOptions = {
       tags: animal,
@@ -33,14 +28,14 @@ $(document).ready(function() {
   photoHTML += '</ul>';
       $('#photos').html(photoHTML);
       //add event listener to start the lightbox
-                            img.addEventListener("click",  function(e){startLightbox(items)}, false);
-                            document.getElementById("photos").appendChild(img); 
+      img.addEventListener("click",  function(e){startLightbox(items)}, false);
+      document.getElementById("photos").appendChild(img); 
       
     }
     $.getJSON(flickerAPI, flickrOptions, displayPhotos);
 
         
-     // $.getJSON(flickerAPI, choice, displayPhotos);
+   
 
   }); // end click
 
